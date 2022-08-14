@@ -37,25 +37,19 @@ const Navbarmenu = () => {
     return (
     <header className="header__middle">
         <div className="container">
-            <div className="row">
-
-               
+            <div className="row">    
                 <div className="header__middle__logo">
                     <NavLink exact activeClassName='is-active' to="/">
                         <h1>Navbar</h1>
                     </NavLink>
                 </div>
-
                 <div className="header__middle__menus">
                     <nav className="main-nav " >
-
                     {isResponsiveclose === true ? <> 
                         <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiXCircle />   </span>
                     </> : <> 
                         <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiAlignRight />   </span>
                     </>}
-
-
                     <ul className={boxClass.join(' ')}>
                     <li  className="menu-item" >
                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> 
@@ -68,10 +62,7 @@ const Navbarmenu = () => {
                         </ul>
                     </li>
                     <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </NavLink> </li>
-
                     </ul>
-
-
                     </nav>     
                 </div>   
         
